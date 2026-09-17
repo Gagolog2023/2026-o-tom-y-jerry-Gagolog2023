@@ -1,9 +1,32 @@
-import example.pepita
+import example.*
 
-describe "group of tests for pepita" {
+object quilomberoGenerico {
+  method hacerQuilombo() {}
+  method velocidad() = 5
+}
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+object cuidadorGenerico {
+  method limpiarCasa() {}
+  method atraparQuilombero(quilombero) = true
+  method dormir() {}
+}
+
+describe "el test funciona" {
+
+  test "el test compila" {
+    assert.equals(10, tuffy.velocidad())
   }
 
+}
+
+describe "propiedades de Tom" {
+
+  test "tom captura al quilombero si es mas rapido que el" {
+    assert.that(tom.atraparQuilombero(jerry))
+  }
+
+ // test "a tom se le interrumpe el sueño si hay mucho ruido" {
+   // const energiaPrueba = tom.velocidad()*10 - 5
+    //assert.equals(energiaPrueba - 20, casa.muchoRuido())
+//  }
 }
